@@ -1,0 +1,280 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+char Peserta [40];
+int Total;
+
+class Soal
+{
+	private:
+		string Soal_Text;
+		string Jawaban_A;
+		string Jawaban_B;
+		string Jawaban_C;
+		string Jawaban_D;
+		string Jawaban_Benar;
+		string Jawaban_Kosong;
+		int Soal_Score;
+
+	public:
+		void setValues (string, string, string, string, string, string, string, int);
+		void askSoal ( );
+
+};
+
+int main()
+{
+	cout<<"========================================"<<endl; //Toyib
+	cout<<"Soal Ujian Akhir "<<endl;
+	cout<<"========================================"<<endl;
+	cout<<endl;
+
+	cout<<"Silahkan Tekan ENTER "<<endl;
+	cin.get();
+
+	char Nama [40];
+	string Nim;
+	cout<<"Masukkan Nama Anda "<<endl;
+	cin.getline(Nama,40);
+	cout<<"Masukkan NIM Anda "<<endl;
+	cin>>Nim;
+	cout<<endl;
+	
+	//pras
+	string Respon;
+	cout<<"Siap Untuk Kuis "<< Nama << "? Ya/ya/tidak/Tidak."<<endl; 
+	cin>>Respon;
+	if (Respon == "Ya")
+	{
+		cout<<endl;
+		cout<<"Selamat Mengerjakan "<<endl;
+		cout<<endl;
+	}
+	
+		else if (Respon == "ya")
+	{
+		cout<<endl;
+		cout<<"Selamat Mengerjakan "<<endl;
+		cout<<endl;
+	}
+		else if (Respon == "tidak")
+	{
+		cout<<endl;
+		cout<<"Terima Kasih "<<endl;
+		system("PAUSE");
+		cout<<endl;
+		exit(0);
+	}
+		else if (Respon == "Tidak")
+	{
+		cout<<endl;
+		cout<<"Terima Kasih "<<endl;
+		system("PAUSE");
+		cout<<endl;
+		exit(0);
+	}
+		else
+	{
+		cout<<endl;
+		cout<<"Tidak ada dalam pilihan "<<endl;
+		system("PAUSE");
+		cout<<endl;
+		exit(0);
+	}
+
+	//Dani sama Rizky
+	//Dani no 1 sampe 5
+	//Rizky no 6 sampe 10
+	Soal s1;
+	Soal s2;
+	Soal s3;
+	Soal s4;
+	Soal s5;
+	Soal s6;
+	Soal s7;
+	Soal s8;
+	Soal s9;
+	Soal s10;
+
+	s1.setValues("1. Yang termasuk bahasa program adalah?",
+				"mozilla()",
+				"google ()",
+				"c++ ()",
+				"program ()",
+				" ()",
+				"C",
+				10);
+
+	s2.setValues("2. Yang termasuk bahasa program adalah?",
+				"mozilla()",
+				"google ()",
+				"c++ ()",
+				"program ()",
+				" ()",
+				"C",
+				10);
+
+	s3.setValues("3. Yang termasuk bahasa program adalah?",
+				"mozilla()",
+				"google ()",
+				"c++ ()",
+				"program ()",
+				" ()",
+				"C",
+				10);
+
+	s4.setValues("4. Yang termasuk bahasa program adalah?",
+				"mozilla()",
+				"google ()",
+				"c++ ()",
+				"program ()",
+				" ()",
+				"C",
+				10);
+
+	s5.setValues("5. Yang termasuk bahasa program adalah?",
+				"mozilla()",
+				"google ()",
+				"c++ ()",
+				"program ()",
+				" ()",
+				"C",
+				10);
+
+	s6.setValues("6. Yang termasuk bahasa program adalah?",
+				"mozilla()",
+				"google ()",
+				"c++ ()",
+				"program ()",
+				" ()",
+				"C",
+				10);
+
+	s7.setValues("7. Yang termasuk bahasa program adalah?",
+				"mozilla()",
+				"google ()",
+				"c++ ()",
+				"program ()",
+				" ()",
+				"C",
+				10);
+
+	s8.setValues("8. Yang termasuk bahasa program adalah?",
+				"mozilla()",
+				"google ()",
+				"c++ ()",
+				"program ()",
+				" ()",
+				"C",
+				10);
+
+	s9.setValues("9. Yang termasuk bahasa program adalah?",
+				"mozilla()",
+				"google ()",
+				"c++ ()",
+				"program ()",
+				" ()",
+				"C",
+				10);
+
+	s10.setValues("10. Yang termasuk bahasa program adalah?",
+				"mozilla()",
+				"google ()",
+				"c++ ()",
+				"program ()",
+				" ()",
+				"C",
+				10);
+
+	s1.askSoal();
+	s2.askSoal();
+	s3.askSoal();
+	s4.askSoal();
+	s5.askSoal();
+	s6.askSoal();
+	s7.askSoal();
+	s8.askSoal();
+	s9.askSoal();
+	s10.askSoal();
+
+	cout<<"Total Score "<< Total << " "<<endl; //Kais
+	cout<<endl;
+
+	if(Total >=70)
+	{
+		cout<<endl;
+		cout<<"Anda Berhasil Lulus Ujian"<<endl;
+		cout<<endl;
+		system ("pause");
+	}
+	
+	else if (Total >=40)
+	{
+		cout<<endl;
+		cout<<"Nilai Anda Rata-Rata"<<endl;
+		cout<<"Total Nilai Anda "<< Total <<" Kurang dari 100"<<endl;
+		cout<<endl;
+		system("pause");
+	}
+	else
+	{
+		cout<<"Maaf, Anda Belum Lulus"<<endl;
+		cout<<"Total Nilai Anda "<< Total <<" Kurang dari 100"<<endl;
+		cout<<endl;
+		cout<<"Semoga Beruntung Dilain Waktu "<<endl;
+		system ("pause");
+	}
+}
+void Soal::setValues (string s, string ja, string jb, string jc, string jd, string jj, string jk, int ss) //Riyo
+{
+		Soal_Text = s ;
+		Jawaban_A = ja;
+		Jawaban_B = jb;
+		Jawaban_C = jc;
+		Jawaban_D = jd;
+		Jawaban_Benar = jj;
+		Jawaban_Kosong = jk;
+		Soal_Score = ss;
+}
+void Soal::askSoal() //Miranda
+{
+	cout<<endl;
+	cout<<Soal_Text <<endl;
+	cout<<"A. "<< Jawaban_A<<endl;
+	cout<<"B. "<< Jawaban_B<<endl;
+	cout<<"C. "<< Jawaban_C<<endl;
+	cout<<"D. "<< Jawaban_D<<endl;
+	cout<<endl;
+	
+	cout<<"Apa Jawaban Anda?"<<endl;
+	cin>>Peserta;
+
+	if(Peserta == Jawaban_Benar)
+{
+	cout<<endl;
+	cout<<"Benar. "<<endl;
+	Total = Total + Soal_Score;
+	cout<<"Score: "<< Soal_Score <<" Dari "<< Soal_Score<< "!"<<endl;
+	cout<<endl;
+}
+
+	else if (Peserta == Jawaban_Kosong)
+{
+	cout<<endl;
+	cout<<"Masukkan Jawaban Yang Valid. "<<endl;
+	cout<<"Score: 0"<< " Dari "<< Soal_Score<< "!"<<endl;
+	cout<<"Jawaban Yang Benar Adalah "<< Jawaban_Benar<< "!"<<endl;
+	cout<<endl;
+}
+	
+	else 
+{
+	cout<<endl;
+	cout<<"Salah. "<<endl;
+	cout<<"Score: 0"<< " Dari "<< Soal_Score<< "!"<<endl;
+	cout<<"Jawaban Yang Benar Adalah "<< Jawaban_Benar<< "!"<<endl;
+	cout<<endl;
+}
+}
